@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 //큰 수의 법칙
 //n : 배열의 개수 (자연수의 개수) m : 더하는 횟수 k : 연속해서 더해질 수 있는 횟수
+//test
 public class Algorithm_ChaeHyun_3_2 {
 
     public static void main(String[] args) {
