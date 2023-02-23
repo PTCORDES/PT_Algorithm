@@ -1,12 +1,14 @@
 package Chapter2_구현;
 
 import java.util.Scanner;
+
 //시뮬레이션
 //다시 정리하기
 public class Algorithm_ChaeHyun_4_4 {
-    public static int n, m, x, y, direction;
-    public static int[][] d = new int[50][50]; //맵
-    public static int[][] arr = new int [50][50]; // 전체 맵 정보
+    public static int n, m; // 가로, 세로
+    public static int  x, y, direction; //현재 좌표, 방향
+    public static int[][] d = new int[50][50]; //맵 // 방문했는지
+    public static int[][] arr = new int [50][50]; // 전체 맵 정보 // 바다 여부(바다이면 못가니까)
 
     // 북, 동, 남, 서 방향
     public static int dx[] = {-1, 0, 1, 0};
@@ -40,7 +42,7 @@ public class Algorithm_ChaeHyun_4_4 {
 
         // 시뮬레이션 시작
         int cnt = 1;
-        int turn_time = 0;
+        int turn_time = 0; //동서남북 방향을 다 체크했는지 확인하기 위함
         while (true) {
             // 왼쪽으로 회전
             turn_left();
@@ -52,14 +54,14 @@ public class Algorithm_ChaeHyun_4_4 {
                 x = nx;
                 y = ny;
                 cnt += 1;
-                turn_time = 0;
+                turn_time = 0; //이동했으니까 다시 왼쪽으로 돌며 체크
                 continue;
             }
             // 회전한 이후 정면에 가보지 않은 칸이 없거나 바다인 경우
             else turn_time += 1;
             // 네 방향 모두 갈 수 없는 경우
             if (turn_time == 4) {
-                nx = x - dx[direction];
+                nx = x - dx[direction]; //뒤로가기(반대로 가야하니까 뺀다)
                 ny = y - dy[direction];
                 // 뒤로 갈 수 있다면 이동하기
                 if (arr[nx][ny] == 0) {

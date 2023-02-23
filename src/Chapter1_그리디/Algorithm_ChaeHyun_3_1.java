@@ -11,7 +11,6 @@ public class Algorithm_ChaeHyun_3_1 {
          가장 큰 화폐 단위부터 돈을 거슬러 주는 것
          시간 복잡도 : 동전의 총 종류 ( 거슬러 줘야 하는 금액의 크기와는 무관)
  */
-//sdfsds
     public static void main(String[] args) {
         int a = 1260;
         int total = 0;
