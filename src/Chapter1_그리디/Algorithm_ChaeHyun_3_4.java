@@ -24,7 +24,7 @@ public class Algorithm_ChaeHyun_3_4 {
         System.out.println(total);
     }
 
-    //더 간단한 풀이
+//     풀이2
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        int n = sc.nextInt();

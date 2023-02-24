@@ -1,16 +1,17 @@
 package Chapter2_구현;
 
 import java.util.Scanner;
-
+//게임 개발
+//삼성 코딩 테스트
 public class Algorithm_ChaeHyun_4_4_2 {
 
     public static int n, m;
     public static int a, b, direction;
     public static int[][] d = new int[50][50]; //방문했는지
-    public static int[][] array = new int[50][50]; //바다인지
+    public static int[][] array = new int[50][50]; //바다인지(바다일 경우 이동x)
 
     public static int dx[] = {-1, 0, 1, 0};
-    public static int dy[] = {0, 1, 0, -1};
+    public static int dy[] = {0, 1, 0, -1}; //북동남서
     public static void turn_left(){
         direction -= 1;
         if(direction==-1)
@@ -38,7 +39,7 @@ public class Algorithm_ChaeHyun_4_4_2 {
             turn_left();
             int nx = a + dx[direction];
             int ny = b + dy[direction];
-            if (d[nx][ny] == 0 && array[nx][ny] == 0) {
+            if (d[nx][ny] == 0 && array[nx][ny] == 0) { //이동할 수 있는 경우
                 a = nx;
                 b = ny;
                 turn_time = 0;
@@ -46,7 +47,7 @@ public class Algorithm_ChaeHyun_4_4_2 {
                 continue;
             } else {
                 turn_time++;
-                if (turn_time == 4) {
+                if (turn_time == 4) { //모든 방향 탐색을 끝낸경우
                     nx = a - dx[direction];
                     ny = b - dy[direction];
                     if (array[nx][ny] == 0) {

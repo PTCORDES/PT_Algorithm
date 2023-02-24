@@ -11,6 +11,7 @@ public class Algorithm_ChaeHyun_4_1 {
         int n = sc.nextInt();
         sc.nextLine(); //버퍼 비우기
         //윗 줄에서 입력을 한번 받았기 때문에 공백을 인식할 수 있어서 비워줘야 함
+
         int a = 1;
         int b = 1;
 

@@ -11,7 +11,6 @@ public class Algorithm_ChaeHyun_3_2 {
     public static void main(String[] args) {
         //가장 큰 수와 두번째로 큰 수만 저장하면 된다
         Scanner scanner = new Scanner(System.in);
-
         int n = scanner.nextInt();
         int m = scanner.nextInt();
         int k = scanner.nextInt();
