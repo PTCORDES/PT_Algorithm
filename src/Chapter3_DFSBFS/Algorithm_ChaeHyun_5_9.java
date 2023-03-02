@@ -1,36 +1,36 @@
 package Chapter3_DFSBFS;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class Algorithm_ChaeHyun_5_8 {
-
+//BFS-큐
+//좀 더 빠르다
+public class Algorithm_ChaeHyun_5_9 {
     public static boolean[] visited = new boolean[9];
     public static ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
 
-    //dfs 함수 정의
-    public static void dfs(int x) {
-        //현재 노드 방문 처리
-        visited[x] = true;
-        System.out.print(x + " ");
+    public static void bfs(int start) {
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(start);
 
-        //현재 노드 연결된 다른 노드 재귀적으로 방문
-        //거의 대부분 숫자 낮은 순대로 됨
-        for (int i = 0; i < graph.get(x).size(); i++) {
-            int y = graph.get(x).get(i); //현재 노드// 와 연결된 다른 노드
-            if(!visited[y]) dfs(y);
+        visited[start] = true;
+        //큐가 비어있지 않으면 반복
+        while (!q.isEmpty()) {
+            int x = q.poll();
+            System.out.print(x + " ");
+            //아직 방문하지 않은 원소들을 큐에 삽입
+            for (int i = 0; i < graph.get(x).size(); i++) {
+                int y = graph.get(x).get(i);
+                if (!visited[y]) {
+                    q.offer(y);
+                    visited[y] = true;
+                 }
+            }
         }
-
-        //풀이2
-//        for (int node : graph[x]) {
-//            // 인접한 노드가 방문한 적이 없다면 DFS 수행
-//            if(!visited[node]) {
-//                dfs(node);
-//            }
-//        }
     }
-
     public static void main(String[] args) {
-        //초기화
+        // 그래프 초기화
         for (int i = 0; i < 9; i++) {
             graph.add(new ArrayList<Integer>());
         }
@@ -69,6 +69,6 @@ public class Algorithm_ChaeHyun_5_8 {
         graph.get(8).add(1);
         graph.get(8).add(7);
 
-        dfs(1);
+        bfs(1);
     }
 }
