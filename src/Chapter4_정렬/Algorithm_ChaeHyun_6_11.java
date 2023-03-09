@@ -2,6 +2,7 @@ package Chapter4_정렬;
 
 import java.util.*;
 
+//격자 줄이기 문제 - 정렬 후 hashmap 적용 후 해결
 class Student implements Comparable<Student>{
 
     private String name;

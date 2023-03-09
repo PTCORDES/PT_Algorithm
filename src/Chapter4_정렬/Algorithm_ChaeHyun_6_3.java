@@ -2,6 +2,7 @@ package Chapter4_정렬;
 
 //삽입 정렬 - 자신보다 작은 값을 만났을 때 그 위치에 삽입
 //큰 값 만나면 swap
+//오름차순 되어있으면 효울이 좋다
 public class Algorithm_ChaeHyun_6_3 {
     public static void main(String[] args) {
         int n = 10;

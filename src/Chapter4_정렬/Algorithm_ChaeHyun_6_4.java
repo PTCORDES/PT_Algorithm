@@ -16,14 +16,21 @@ public class Algorithm_ChaeHyun_6_4 {
         while (left <= right) {
             //pivot보다 큰 데이터를 찾을 때까지 반복
             //pivot보다 작다면 한칸씩 이동하며 반복
-            while (left <= end && arr[left] <= arr[pivot]) left++;
+            while (left <= end && arr[left] <= arr[pivot]){
+                System.out.println("left " + left);
+                left++;
+            }
             //pivot보다 작은 데이터를 찾을 때까지 반복
-            while (right > start && arr[right] >= arr[pivot]) right--;
+            while (right > start && arr[right] >= arr[pivot]){
+                System.out.println("right " + right);
+                right--; //정렬이 되어 있을 경우 right 이 계속 줄어들다가 right=0
+            }
 
             if (left > right) { //엇갈렸다면 작은 데이터와 pivot 교체
                 int temp = arr[pivot];
                 arr[pivot] = arr[right]; //작은 데이터 = 오른쪽에서 찾은 값
                 arr[right] = temp;
+                System.out.println(pivot);
             }
 
             //엇갈리지 않았다면 작은 데이터 <-> 큰데이터
@@ -39,7 +46,7 @@ public class Algorithm_ChaeHyun_6_4 {
     }
     public static void main(String[] args) {
         int n = 10;
-        int[] arr = {7, 5, 9, 0, 3, 1, 6, 2, 4, 8};
+        int[] arr = {0,1,2,3,4,5,6,7,8,9};
 
         quickSort(arr, 0, n - 1);
 
