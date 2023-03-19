@@ -32,7 +32,7 @@ public class Algorithm_ChaeHyun_7_8 {
             if (total < m) { //떡의 양이 적을 땐 더 많이 잘라야 하니 (왼쪽 탐색)
                 end = mid - 1;
             } else {
-                result = mid; //떡의 양이 충분한 경우 덜 잘라야 함(오른족 탐색)
+                result = mid; //떡의 양이 충분한 경우 덜 잘라야 함(오른쪽 탐색)
                 start = mid + 1; //최대한 덜 잘랐을 때가 정답이므로, result에 mid(높이) 저장
             }
         }
