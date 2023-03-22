@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 //1로 민들기
 public class Algorithm_ChaeHyun_8_5 {
+    //계산된 횟수를 저장하기 위한 dp 테이블
     public static int[] d = new int[30001];
 
     //풀이1
@@ -27,7 +28,8 @@ public class Algorithm_ChaeHyun_8_5 {
 //        System.out.println(d[n]);
 //    }
 
-    //풀이2
+    //풀이2 - d[1] = 0
+    // 1을 뺐을 때, 나누기를 했을 때 둘 중 최솟값을 테이블에 넣는다
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
