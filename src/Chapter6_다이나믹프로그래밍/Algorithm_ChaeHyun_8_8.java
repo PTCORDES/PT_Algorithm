@@ -24,6 +24,7 @@ public class Algorithm_ChaeHyun_8_8 {
             for (int j = arr[i]; j <= m; j++) {
                 if (d[j - arr[i]] != 10001) { //무조건 0
                     //배수로 차근차근 쌓아나간다
+                    //배수로 쌓으면 이전에 값이 있으니까 계속해서 갱신이 되는 것
                     d[j] = Math.min(d[j], d[j - arr[i]] + 1);
                 }
             }

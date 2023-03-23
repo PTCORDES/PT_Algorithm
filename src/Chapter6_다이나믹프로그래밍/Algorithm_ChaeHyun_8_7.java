@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 //타일
 //점화식 : a(i) = a(i-1) + 2 * a(i-2)
+//타일 점화식
 public class Algorithm_ChaeHyun_8_7 {
 
     public static int[] d = new int[1001];

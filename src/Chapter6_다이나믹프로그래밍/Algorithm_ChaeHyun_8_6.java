@@ -48,6 +48,8 @@ public class Algorithm_ChaeHyun_8_6 {
             //건너뛴 값은 더할 수 있어서 더한 값
             //두개 값 비교해서 최대 값 저장
             d[j] = Math.max(d[j-1], d[j-2]+ arr[j]);
+            //d[j-2]+arr[j] = 자신을 포함한 최댓값
+            //d[j-1] = 자신을 포함하지 않은 최댓값이니까 이전의 값
         }
 
         System.out.println(d[n-1]);
