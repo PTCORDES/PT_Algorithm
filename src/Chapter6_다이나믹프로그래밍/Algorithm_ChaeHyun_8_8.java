@@ -3,7 +3,7 @@ package Chapter6_다이나믹프로그래밍;
 import java.util.Arrays;
 import java.util.Scanner;
 
-//화폐 구성
+//최소한의 화폐 구성
 public class Algorithm_ChaeHyun_8_8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

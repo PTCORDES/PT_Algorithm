@@ -3,6 +3,7 @@ package Chapter6_다이나믹프로그래밍;
 import java.util.Scanner;
 
 //개미전사
+//연속 선택x, 최댓값 구하기
 public class Algorithm_ChaeHyun_8_6 {
 
     //풀이1 - 다이나믹x
