@@ -1,16 +1,21 @@
-# 앞서 계산된 결과를 저장하기 위한 DP 테이블 초기화
+# 개미전사
+n = int(input())
 
-d = [0] * 100
+# 모든 사람 정보 입력받기
+array = list(map(int,input().split()))
 
-# 첫 번째 피보나치 수와 두 번째 피보나치 수는 1
-d[1] = 1
-d[2] = 1
-n = 99
+# 앞서 계산된 결과를 지정하기 위한 DP 테이블 초기화
 
-# 피보나치 함수 반복문으로 구현 (Bottom - Up 프로그래밍)
+d = [0] * 100 
 
-for i in range(3, n+1):
-    d[i] = d[i-1] + d[i-2]
+# 다이나믹 프로그래밍 진행
+d[0] = array[0]
+d[1] = max(array[0],array[1])
+for i in range(2,n):
+    d[i] = max[d[i-1],d[i-2] + array[i]]
 
 
-print(d[n])
+# 계산된 결과 출력
+
+print(d[n-1])
+
