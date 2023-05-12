@@ -21,19 +21,20 @@ public class Algorithm_ChaeHyun_9_4 {
             Arrays.fill(graph[i], INF);
         }
 
+        // 자기 자신에서 자기 자신으로 가는 비용은 0으로 초기화
         for (int a = 1; a <= n; a++) {
             for (int b = 1; b <= n; b++) {
                 if(a==b) graph[a][b] = 0;
             }
         }
 
+        // A와 B가 서로에게 가는 비용은 1
         for (int i = 0; i < m; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
             graph[a][b] = 1;
             graph[b][a] = 1;
         }
-
 
         x = sc.nextInt();
         k = sc.nextInt();
