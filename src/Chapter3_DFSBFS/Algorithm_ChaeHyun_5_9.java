@@ -6,6 +6,9 @@ import java.util.Queue;
 
 //BFS-큐
 //좀 더 빠르다
+//인접리스트(LinkedList) vs 인접행렬(int[][] addArray)
+//인접리스트 : O(n+e) 인접 행렬: O(n^2)
+//그래프 내에 적은 수의 간선을 가지는 희소그래프의 경우 인접행렬을 사용하면 메모리 낭비가 크므로 인접리스트가 유리
 public class Algorithm_ChaeHyun_5_9 {
     public static boolean[] visited = new boolean[9];
     public static ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
